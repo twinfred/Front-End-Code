@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Search Bar</title>
+    <style>
+        #search-submit {
+            background-image: url('/PracticeCode/SearchBar/white-magnifying-glass.png');
+            background-size: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+            border-radius: 100%;
+            border: none;
+            box-shadow: -6px 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 30px;
+            height: 30px;
+            vertical-align: top;
+            /* margin-left: -30px; */
+        }
+        #search-bar:focus {
+            outline: none;
+        }
+        #search-bar {
+            height: 30px;
+            width: 0px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: -6px 0px 10px 0 rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script>
+    // #search-submit on hover make #search-bar slide out from the left to 250px wide
+    $(document).ready(function(){
+        $('#search-submit').hover(function(){
+            $('#search-bar').animate({width: '300px'}, 350, 'linear', function(){
+                $('#search-submit').css('margin-left', '-30px');
+                $('#search-bar').css('padding', '8px');
+            });
+        })
+    })
+    </script>
+</head>
+<body>
+    <form action="/" method="get">
+        <input type="text" name="search-bar" id="search-bar">
+        <input type="submit" id="search-submit" value="">
+    </form>
+</body>
+</html>

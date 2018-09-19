@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jCarousel</title>
+    <style>
+        .jcarousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .jcarousel li {
+            float: left;
+        }
+
+        #homeMovieCarousel {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            height: 189px;
+            width: 75%;
+        }
+
+        ul {
+            position: relative;
+            width: 100vw;
+            padding-inline-start: 0;
+            margin: 0 43px;
+        }
+        
+        li {
+            list-style-type: none;
+            padding-right: 8px;
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            box-sizing: border-box;
+        }
+
+        .poster {
+            width: 126px;
+            height: 189px;
+            position: relative;
+            background-color: #FFF;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .visual-container {
+            position: relative;
+            z-index: 0;
+            display: block;
+            overflow: hidden;
+            background-color: #000;
+            text-decoration: none;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        .poster-thumb-size-s {
+            position: absolute;
+            top: 0;
+            min-height: 100%;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        
+        button {
+            background-color: #f17601;
+            position: absolute;
+            top: 0;
+            margin: auto;
+            width: 43px;
+            height: 100%;
+            border: none;
+            z-index: 1;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+        
+        .js-flipper-left {
+            float: left;
+            left: 0;
+            border-right: 3px solid #FFF;
+        }
+
+        .js-flipper-right {
+            float: right;
+            right: 0;
+            border-left: 3px solid #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="homeMovieCarousel" class="jcarousel">
+        <ul class="carousel-items">
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/185804/cars3-posterart.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/191725/wonderwoman-posterart.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/200545/RoughNight2017.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/200223/47MDOneSheet6_FINALREV1.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/193741/AEOM_Payoff-1sheet.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/196457/TransformersLastKnight.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/197714/The%20Mummy%20TCVersion.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/199695/ITCOTHD-02-KeyArt2_FMhr_jun.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/192071/captainunderpants-posterart.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="poster">
+                    <a href="#!" class="visual-container">
+                        <img src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/200746/MeganLeavey2017.jpg" alt="#" class="poster-thumb-size-s">
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <button class="js-flipper-left"><</button>
+        <button class="js-flipper-right">></button>
+    </div>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/PracticeCode/jCarousel/jquery.jcarousel.js"></script>
+        <script>
+            (function($) {
+                'use strict';
+                var carousel;
+
+                function scrollNext(){
+                    carousel.scroll('-=2');
+                }
+
+                function scrollPrev(){
+                    carousel.scroll('+=2');
+                }
+
+                function onLoad(){
+                    var $carousel = $('#homeMovieCarousel');
+                    var $items = $('.carousel-items', $carousel).children();
+                    console.log($items);
+                    var width = $carousel.innerWidth();
+                    $carousel.jcarousel('list').width($items.length * width);
+                }
+                
+                function init(){
+                    var $carousel = $('#homeMovieCarousel');
+
+                    carousel = $carousel
+                    .on('jcarousel:create jcarousel:reload', onLoad)
+                    .jcarousel({
+                        animation: {
+                            duration: 300
+                        },
+                        wrap: 'circular'
+                    })
+                    .data('jcarousel');
+
+                    $('.js-flipper-left', $carousel).click(scrollNext);
+                    $('.js-flipper-right', $carousel).click(scrollPrev);
+                }
+
+                init();
+
+            })(jQuery);
+        </script>
+    </footer>
+</body>
+</html>
